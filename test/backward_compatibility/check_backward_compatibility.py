@@ -19,6 +19,7 @@ from torch._C import parse_schema
 white_list = [
     ('c10_experimental', datetime.date(2222, 1, 1)),
     ('prim::AutogradAnyNonZero', datetime.date(2020, 2, 1)),
+    ('aten::Int', datetime.date(2019, 12, 30)),
 ]
 
 
