@@ -93,7 +93,7 @@ void checkSameSizeAndType(
 
 } // namespace
 
-ProcessGroupMPI::AsyncWork::AsyncWork(at::Tensor tensor, MPI_Request request)
+ProcessGroupMPI::AsyncWork::AsyncWork(at::Tensor& tensor, MPI_Request request)
     : tensor_(std::move(tensor)), request_(request) {
   memset(&status_, 0, sizeof(status_));
 }
